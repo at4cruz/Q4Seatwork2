@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Q4 Seatwork 2</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style type="text/css">
+    	table, th, td{
+    	align-content: center;
+    	border: 1px solid black;
+        border-collapse: collapse;
+        padding: 10px;
+        font-size: larger;
+        background-color: orangered;
+    	}
+    	body{
+    		background-color: lightgray;
+    	}
+    	table{
+    		width: 100%;
+    	}
+    	p{
+    		font-size: large;
+    	}
+    	input{
+    		width: 25%;
+    	}
+    	td{
+    		background-color: steelblue;
+    	}
+    </style>
+</head>
+<body class="text-center">
+	<h1>Date & Time Today</h1>
+<p id="today"></p>
+
+<script class="text-sucess">
+	const date = new Date();
+	document.getElementById("today").innerHTML = date;
+</script>
+    <h1>Fahrenheit to Celsius Converter</h1>
+     <p>Enter a temperature in Fahrenheit:</p>
+    <input type="text" id="fahrenheit" />
+    <button onclick="convert()">Convert</button>
+<script>
+		 function convert() {
+        var fahrenheit = parseFloat(document.getElementById("fahrenheit").value);
+        var celsius = (fahrenheit - 32) * 5/9;
+        alert(fahrenheit + " Degrees Fahrenheit is " + celsius.toFixed(2) + " Degrees Celsius.");
+      }
+</script>
+<h1>Description Table of the Temperature at Given Values</h1>
+<table>
+	<tr>
+		<th>Fahrenheit</th>
+		<th>Celsius</th>
+		<th>Temperature Description</th>
+			</tr>
+	<tr>
+		<td>68 Degrees</td>
+		<td>20 Degrees</td>
+		<td>Room Temperature</td>
+	</tr>
+	</tr>
+		<tr>
+		<td>98.6 Degrees</td>
+		<td>37 Degrees</td>
+		<td>Average Temperature of The Human Body</td>
+	</tr>
+		<tr>
+		<td>212 Degrees</td>
+		<td>100 Degrees</td>
+		<td>Boiling Point of Water</td>
+	</tr>
+	<tr>
+		<td>32 Degrees</td>
+		<td>0 Degrees</td>
+		<td>Freezing Point of Water</td>
+	</tr>
+	<tr>
+		<td>-459.67 Degrees</td>
+		<td>-273.15 Degrees</td>
+		<td>Absolute Zero</td>
+	</tr>
+		<tr>
+		<td>27,000,000 Degrees</td>
+		<td>15,000,000 Degrees</td>
+		<td>Temperature of The Sun</td>
+	</tr>
+</table>
+</body>
+</html>
